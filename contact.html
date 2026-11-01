@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Launch Local</title>
+<meta name="description" content="Ask a question before you buy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-logo" href="/">Launch Local<span>.</span></a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/contact" aria-current="page">Contact</a></li>
+        <li><a class="nav-cta" href="/pricing">Get started</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+  </div>
+</header>
+<section class="section"><div class="container"><div class="contact-layout">
+  <div>
+    <div class="hero__eyebrow">Questions before you buy?</div>
+    <h1 style="max-width:14ch;">Ask me anything.</h1>
+    <p class="lead">Not sure which package fits, or need something custom? Send a message and I will reply within one business day.</p>
+    <div style="margin-top:40px;color:var(--grey);">
+      <p style="margin-bottom:6px;"><strong style="color:var(--cream);">Email</strong><br>hello@yourdomain.com</p>
+      <p><strong style="color:var(--cream);">Response time</strong><br>Within 1 business day</p>
+    </div>
+  </div>
+  <div>
+    <form name="contact" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none"><label>Do not fill this out: <input name="bot-field"></label></p>
+      <div class="form-field"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
+      <div class="form-field"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+      <div class="form-field"><label for="business">Business name</label><input type="text" id="business" name="business"></div>
+      <div class="form-field"><label for="message">Your question</label><textarea id="message" name="message" rows="5" required></textarea></div>
+      <button type="submit" class="btn btn-solid">Send message</button>
+    </form>
+  </div>
+</div></div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div>
+        <a class="site-logo" href="/">Launch Local<span>.</span></a>
+        <p style="max-width:34ch;color:var(--grey);margin-top:14px;">Professional websites for local businesses. Fixed prices, fast turnaround.</p>
+      </div>
+      <nav aria-label="Footer"><ul>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/terms">Terms &amp; refund policy</a></li>
+      </ul></nav>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&copy; <script>document.write(new Date().getFullYear())</script> Launch Local. All rights reserved.</span>
+      <span>Payments processed securely by Stripe.</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/main.js"></script>
+</body>
+</html>

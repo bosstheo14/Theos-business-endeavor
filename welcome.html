@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome | Launch Local</title>
+<meta name="description" content="Send your project details.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-logo" href="/">Launch Local<span>.</span></a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a class="nav-cta" href="/pricing">Get started</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+  </div>
+</header>
+<section class="section"><div class="container"><div class="contact-layout">
+  <div>
+    <div class="hero__eyebrow">Payment received</div>
+    <h1 style="max-width:14ch;">Welcome aboard. Let's build your site.</h1>
+    <p class="lead">Thank you. Fill out this form so I can start. The more detail you give, the fewer revisions you will need.</p>
+    <div style="margin-top:32px;color:var(--grey);">
+      <p><strong style="color:var(--cream);">What happens next</strong></p>
+      <p>1. I review your answers and confirm by email.<br>2. You receive a homepage draft.<br>3. We refine it together, then launch.</p>
+    </div>
+  </div>
+  <div>
+    <!-- In Stripe, set each Payment Link's confirmation page to redirect to https://YOURDOMAIN/welcome -->
+    <form name="project-intake" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="project-intake">
+      <p style="display:none"><label>Do not fill this out: <input name="bot-field"></label></p>
+      <div class="form-field"><label for="business">Business name</label><input type="text" id="business" name="business" required></div>
+      <div class="form-field"><label for="email">Email you paid with</label><input type="email" id="email" name="email" required></div>
+      <div class="form-field"><label for="package">Package</label>
+        <select id="package" name="package" style="width:100%;background:var(--black-soft);border:1px solid var(--black-softer);color:var(--cream);padding:14px 16px;font-size:1rem;">
+          <option>Starter</option><option>Business</option><option>Growth</option>
+        </select></div>
+      <div class="form-field"><label for="about">What does your business do?</label><textarea id="about" name="about" rows="4" required></textarea></div>
+      <div class="form-field"><label for="domain">Domain name (if you have one)</label><input type="text" id="domain" name="domain"></div>
+      <div class="form-field"><label for="assets">Link to logo and photos (Google Drive, Dropbox)</label><input type="text" id="assets" name="assets"></div>
+      <div class="form-field"><label for="inspo">Links to 2-3 websites whose style you like</label><textarea id="inspo" name="inspo" rows="3"></textarea></div>
+      <button type="submit" class="btn btn-solid">Submit details</button>
+    </form>
+  </div>
+</div></div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div>
+        <a class="site-logo" href="/">Launch Local<span>.</span></a>
+        <p style="max-width:34ch;color:var(--grey);margin-top:14px;">Professional websites for local businesses. Fixed prices, fast turnaround.</p>
+      </div>
+      <nav aria-label="Footer"><ul>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/terms">Terms &amp; refund policy</a></li>
+      </ul></nav>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&copy; <script>document.write(new Date().getFullYear())</script> Launch Local. All rights reserved.</span>
+      <span>Payments processed securely by Stripe.</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/main.js"></script>
+</body>
+</html>
