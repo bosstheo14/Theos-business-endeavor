@@ -4,7 +4,7 @@ Plain HTML/CSS/JS, no build step. Deploys on Netlify. Payments via Stripe Paymen
 
 ## Make it yours (do these before launch)
 1. Brand: search/replace "Launch Local" in all .html files with your new name.
-2. Email: replace hello@yourdomain.com in contact.html and terms.html.
+2. Email: update the contact address in contact.html and terms.html.
 3. Prices, turnaround times, and what each package includes: only promise what you can deliver.
 4. Terms: terms.html is a template with [brackets]. Fill it in and have it reviewed before taking money.
 5. Add real testimonials and portfolio pieces only when you have them. Do not invent reviews.
